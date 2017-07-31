@@ -1,0 +1,147 @@
+@(content: Html)
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	<meta name="viewport" content="width=device-width"/>
+        <title>Doctor Vitaminas</title>
+        
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("salique/css/style.css")"/>
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("salique/css/icons.css")"/>
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("salique/css/slider.css")"/>
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("salique/css/skinblue.css")"/>
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("salique/css/responsive.css")"/>
+		<script src="@routes.Assets.at("salique/js/jquery-1.9.0.min.js")"></script>
+
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    </head>
+    <body>
+        
+        <div class="boxedtheme">
+		<!-- TOP LOGO & MENU
+		================================================== -->
+		<div class="grid">
+			<div class="row space-bot">
+				<!--Logo-->
+				<div class="c4">
+					<a href="@routes.Application.index()">
+					<img src="@routes.Assets.at("salique/images/logo.png")" class="logo" alt="">
+					</a>
+				</div>
+				<!--Menu-->
+				<div class="c8">
+					<nav id="topNav">
+					<ul id="responsivemenu">
+						<li><a href="@routes.Application.index()">INICIO</a></li>
+						<li><a href="@routes.Application.about()">NOSOTROS</a></li>
+						<li><a href="@routes.Application.evaluation()">EVALUACIÓN</a>						
+					</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- START content area
+		================================================== -->
+		@content
+		<!-- end grid -->
+
+		<!-- FOOTER
+		================================================== -->
+		<div id="wrapfooter" style="margin-top: -20px">
+			<div class="grid">
+				<div class="row" id="footer">
+					<!-- to top button  -->
+					<p class="back-top floatright">
+						<a href="#top"><span></span></a>
+					</p>
+					<!-- 3rd column -->
+					<div class="c3">
+						<h2 class="title"><i class="icon-envelope-alt"></i> Desarrolladores</h2>
+						<hr class="footerstress">
+						<dl>
+							<dt>Héctor Chumpitaz Watanave</dt>
+							<dd>María Fernanda Segovia Chacón</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- copyright area -->
+		<div class="copyright">
+			<div class="grid">
+				<div class="row">
+					<div class="c6">
+						 Doctor Vitaminas &copy; 2017. All Rights Reserved.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		<!-- JAVASCRIPTS
+		================================================== -->
+		<!-- all -->
+		<script src="@routes.Assets.at("salique/js/modernizr-latest.js")"></script>
+
+		<!-- menu & scroll to top -->
+		<script src="@routes.Assets.at("salique/js/common.js")"></script>
+
+		<!-- slider -->
+		<script src="@routes.Assets.at("salique/js/jquery.cslider.js")"></script>
+
+		<!-- cycle -->
+		<script src="@routes.Assets.at("salique/js/jquery.cycle.js")"></script>
+
+		<!-- carousel items -->
+		<script src="@routes.Assets.at("salique/js/jquery.carouFredSel-6.0.3-packed.js")"></script>
+
+		<!-- twitter -->
+		<script src="@routes.Assets.at("salique/js/jquery.tweet.js")"></script>
+
+		<!-- Call Showcase - change 4 from min:4 and max:4 to the number of items you want visible -->
+		<script type="text/javascript">
+		$(window).load(function(){			
+					$('#recent-projects').carouFredSel({
+						responsive: true,
+						width: '100%',
+						auto: true,
+						circular	: true,
+						infinite	: false,
+						prev : {
+							button		: "#car_prev",
+							key			: "left",
+								},
+						next : {
+							button		: "#car_next",
+							key			: "right",
+									},
+						swipe: {
+							onMouse: true,
+							onTouch: true
+							},
+						scroll : 2000,
+						items: {
+							visible: {
+								min: 4,
+								max: 4
+							}
+						}
+					});
+				});	
+		</script>
+
+		<!-- Call opacity on hover images from carousel-->
+		<script type="text/javascript">
+		$(document).ready(function(){
+		    $("img.imgOpa").hover(function() {
+		      $(this).stop().animate({opacity: "0.6"}, 'slow');
+		    },
+		    function() {
+		      $(this).stop().animate({opacity: "1.0"}, 'slow');
+		    });
+		  });
+		</script>
+    </body>
+</html>

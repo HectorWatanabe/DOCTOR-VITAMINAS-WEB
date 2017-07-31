@@ -1,0 +1,74 @@
+@main{
+<!-- HEADER
+================================================== -->
+<div class="undermenuarea">
+	<div class="boxedshadow">
+	</div>
+	<div class="grid">
+		<div class="row">
+			<div class="c8">
+				<h1 class="titlehead">Evaluación</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="grid">
+	<div class="row space-top">
+			<!-- CONTACT FORM -->
+				<h1 class="maintitle">
+				<span><i class="icon-plus-sign-alt"></i> Formulario</span>
+				</h1>
+				<div class="wrapcontact">
+					<div class="done">
+						<div class="alert-box success ctextarea">
+							 Your message has been sent. Thank you! <a href="" class="close">x</a>
+						</div>
+					</div>
+					<form method="post" action="@routes.Application.evaluation()" id="contactform">
+						<div class="form">
+								
+							<label>Nombres</label>
+							<input type="text" name="name" required>
+
+							<label>Apellidos</label>
+							<input type="text" name="lastname" required>
+
+							<label>Edad</label>
+							<input type="number" name="year" required>
+							
+							<label>Síntoma</label>
+							<select name="option" required>
+							  <option value="" disabled selected>Selecciona un Síntoma</option>
+
+							  <option value="acne">Acne</option>
+							  <option value="caspa">Caspa</option>
+							  <option value="cansancio">Cansancio</option>
+							  <option value="calambres">Calambres</option>
+							  <option value="caida_del_cabello">Caída del Cabello</option>
+							  <option value="cansancio_ocular">Cansancio Ocular</option>
+							  <option value="debilidad">Debilidad</option>
+							  <option value="depresion">Depresión</option>
+							  <option value="dolor_de_cabeza_frecuente">Dolor de Cabeza Frecuente</option>
+							  <option value="dificultad_ver_oscuridad">Dificultad para ver en la ocuridad</option>
+							  <option value="escorbuto">Escorbuto</option>
+							  <option value="fatiga">Fatiga</option>
+							  <option value="fatiga_cronica">Fatiga Crónica</option>
+							  <option value="falta_de_concentracion">Falta de Concentración</option>
+							  <option value="irritabilidad">Irritabilidad</option>
+							  <option value="insomnio">Insomnio</option>
+							  <option value="inapetencia">Inapetencia</option>
+							  <option value="manchas_oculares">Manchas Oculares</option>
+							  <option value="nauseas">Nauseas</option>
+							  <option value="palidez">Palidez</option>
+							  <option value="transtornos_digestivos">Transtornos digestivos</option>
+
+							</select>
+							<input type="submit" id="submit" class="button" style="font-size:12px;" value="Iniciar Evaluación">
+						</div>
+					</form>
+				</div>
+		</div>
+</div>
+<br><br>
+}
